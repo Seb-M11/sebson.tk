@@ -9,34 +9,41 @@
   <title>Kolorowa tabelka</title>
 
   <style>
-    div {
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
       width: 50px;
       height: 50px;
-      border: black 2px solid;
-      display: inline-block;
+      border: 1px solid black;
     }
   </style>
 </head>
 
-<body id="body">
+<body>
+
+  <h1>By Volper</h1>
 
   <script>
-    for (let i = 0; i < 10; i++) {
-      var a = document.createElement("div");
-      for (let y = 0; y < 10; y++) {
-        var div = document.createElement("div");
-        div.addEventListener("click", abc)
-        body.appendChild(div);
+    const width = 10;
+    const height = 10;
+
+    const table = document.createElement('table');
+    const tr = document.createElement('tr');
+    const td = document.createElement('td');
+    for (let i = 0; i < width; ++i) {
+      tr.appendChild(td.cloneNode(true));
+    }
+    for (let i = 0; i < height; ++i) {
+      table.appendChild(tr.cloneNode(true));
+    }
+    table.addEventListener('click', ({ target }) => {
+      if (target instanceof HTMLTableCellElement) {
+        target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
       }
-      var br = document.createElement("br");
-      body.appendChild(br);
-    }
-
-    function abc(e) {
-
-      l = Math.random() * 360;
-      e.srcElement.style.backgroundColor = 'hsl(' + l + ', 100%, 50%)';
-    }
+    });
+    document.body.appendChild(table);
   </script>
 
 </body>
