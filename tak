@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+</title>
+
+</head>
+
+<body>
+
+
+
+<form>
+  Pierwsza data<br>
+  <input type="text" name="Pierwsza data" id="Pierwszadata" placeholder="YYYY-MM-DD">
+  <br>
+  Druga data <br>
+  <input type="text" name="Druga data" id="Drugadata" placeholder="YYYY-MM-DD">
+</form>
+
+<button onclick="myFunction()">Oblicz</button>
+
+
+<script>
+function myFunction() {
+var a = new Date(document.getElementById("Pierwszadata").value);
+var b = new Date(document.getElementById("Drugadata").value);
+var c = a.getTime();
+var d = b.getTime();
+var e = (c-d);
+var f = e/86400000;
+alert(f);
+}
+</script>
+
+
+
+
+</body>
+
+
+<!--airdroid-->
+
+</html>
