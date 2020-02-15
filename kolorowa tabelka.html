@@ -1,0 +1,35 @@
+<head>
+<style>
+    div
+    {
+        width: 50px;
+        height: 50px;
+        border: black 2px solid;
+        display: inline-block;
+    }
+</style>
+</head>
+<body id="body">
+
+<script>
+for(let i=0; i<10; i++)
+{
+var a = document.createElement("div");
+for(let y=0; y<10; y++)
+{
+    var div = document.createElement("div");
+    div.addEventListener("click", abc)
+    body.appendChild(div);
+}
+var br = document.createElement("br");
+body.appendChild(br);
+}
+function abc (e)
+{
+
+l = Math.random() * 360;
+e.srcElement.style.backgroundColor = 'hsl(' + l + ', 100%, 50%)';
+}
+</script>
+
+</body>
