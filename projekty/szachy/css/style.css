@@ -1,17 +1,2 @@
-.board > div {
-  height: 50px;
-}
-
-.board > div > div {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-}
-
-.board > :nth-child(even) > :nth-child(odd) {
-  background: black;
-}
-
-.board > :nth-child(odd) > :nth-child(even) {
-  background: black;
-}
+*,::before,::after{-webkit-box-sizing:border-box;box-sizing:border-box}body{margin:0;color:#333}.board{--size: 400px;--dark-squares-color: #3d9970;--light-squares-color: #fff;width:100vmin;height:100vmin;max-width:var(--size);max-height:var(--size);margin:0 auto}.board>div{height:12.5%}.board>div>div{width:12.5%;height:100%;display:inline-block}.board>:nth-child(even)>:nth-child(even){background:var(--light-squares-color)}.board>:nth-child(even)>:nth-child(odd){background:var(--dark-squares-color)}.board>:nth-child(odd)>:nth-child(even){background:var(--dark-squares-color)}.board>:nth-child(odd)>:nth-child(odd){background:var(--light-squares-color)}
+/*# sourceMappingURL=style.css.map */

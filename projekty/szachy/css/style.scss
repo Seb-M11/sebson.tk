@@ -1,0 +1,54 @@
+@import 'colors';
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: $main-font-color;
+}
+
+.board {
+  --size: 400px;
+  --dark-squares-color: #{$olive};
+  --light-squares-color: #{$white};
+
+  width: 100vmin;
+  height: 100vmin;
+  max-width: var(--size);
+  max-height: var(--size);
+  margin: 0 auto;
+
+  > div {
+    height: 12.5%;
+
+    > div {
+      width: 12.5%;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+
+  > :nth-child(even) {
+    > :nth-child(even) {
+      background: var(--light-squares-color);
+    }
+
+    > :nth-child(odd) {
+      background: var(--dark-squares-color);
+    }
+  }
+
+  > :nth-child(odd) {
+    > :nth-child(even) {
+      background: var(--dark-squares-color);
+    }
+
+    > :nth-child(odd) {
+      background: var(--light-squares-color);
+    }
+  }
+}
