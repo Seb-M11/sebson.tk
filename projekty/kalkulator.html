@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+kalkulator
+</title>
+</head>
+<body>
+
+
+
+
+<form>
+ pierwsza liczba: <br>
+  <input type="value" id="pierwszaliczba"><br>
+  druga liczba: <br>
+  <input type="value" id="drugaliczba"><br><br>
+</form>
+
+<button onclick="mnożenie()">*</button>
+<button onclick="dzielenie()">/</button>
+<button onclick="odejmowanie()">-</button>
+<button onclick="dodawanie()">+</button>
+
+
+<script>
+function mnożenie() {
+var a = document.getElementById("pierwszaliczba").value;
+var b = document.getElementById("drugaliczba").value;
+alert(a*b);
+}
+
+function dzielenie() {
+var c = document.getElementById("pierwszaliczba").value;
+var d = document.getElementById("drugaliczba").value;
+alert(c/d);
+}
+
+function odejmowanie() {
+var e = document.getElementById("pierwszaliczba").value
+var f = document.getElementById("drugaliczba").value
+alert(e-f)
+}
+
+function dodawanie() {
+var g = document.getElementById("pierwszaiczba").value
+var h = document.getElementById("drugaliczba").value
+alert(g+h)
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
