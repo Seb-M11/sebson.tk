@@ -18,10 +18,12 @@ kalkulator
   <input type="value" id="drugaliczba"><br><br>
 </form>
 
+
+<button onclick="dodawanie()">+</button>
+<button onclick="odejmowanie()">-</button>
 <button onclick="mnożenie()">*</button>
 <button onclick="dzielenie()">/</button>
-<button onclick="odejmowanie()">-</button>
-<button onclick="dodawanie()">+</button>
+
 
 
 <script>
@@ -46,7 +48,9 @@ alert(e-f)
 function dodawanie() {
 var g = document.getElementById("pierwszaliczba").value
 var h = document.getElementById("drugaliczba").value
-alert(g+h)
+var i = parseInt(g);
+var j = parseInt(h);
+alert(i+j);
 }
 
 
