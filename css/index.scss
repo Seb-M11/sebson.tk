@@ -8,9 +8,20 @@ body {
     hsl(18, 30%, 17%) 0%,
     hsl(20, 60%, 30%) 90%
   );
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   transition-duration: 1s;
+  box-sizing: content-box;
+  height: 98%;
+  width: 98%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  padding: none;
+  margin: none;
+  border: none;
+  outline: none;
 
   > * {
     color: white;
@@ -47,10 +58,18 @@ body {
   margin-bottom: 3vh;
   transition-duration: 1s;
   text-decoration: none;
+  animation-name: lr_motion;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+#sticky {
+  position: sticky;
+  top: 0;
 }
 
 #tresc {
-  background-color: rgba(235, 225, 220, .3);
+  background-color: rgba(235, 225, 220, 0.3);
   width: 50%;
   margin: auto;
   margin-top: 10vh;
@@ -106,8 +125,8 @@ ul {
   transition-duration: 1s;
 
   a {
-    background-color: hsla(18, 30%, 17%, .8);
-    color: rgba(255, 255, 255, .7);
+    background-color: hsla(18, 30%, 17%, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 3vh;
     padding: 2.8vh;
   }
@@ -130,6 +149,7 @@ li a,
   padding: 2vh;
   text-decoration: none;
   transition-duration: 1s;
+  cursor: pointer;
 }
 
 li a:hover,
@@ -151,15 +171,7 @@ li.dropdown {
   max-width: 20vw;
   z-index: 1;
   transition-duration: 1s;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
-
-  @media (max-width: 600px) {
-    max-width: 60vw;
-  }
-
-  @media (max-width: 1000px) {
-    max-width: 50vw;
-  }
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 
   a {
     color: rgba(0, 0, 0, 0.5);
@@ -185,7 +197,7 @@ li.dropdown {
 }
 
 .button {
-  color: hsl(18, 30%, 17%,);
+  color: hsl(18, 30%, 17%);
   background-color: hsl(20, 92%, 54%);
   padding: 1vh;
   font-family: Bahnschrift, Tahoma, Arial, sans-serif;
@@ -194,7 +206,7 @@ li.dropdown {
   display: inline;
   margin: 0 1vw;
   transition-duration: 1s;
-  border-top: solid .5vh hsl(18, 30%, 17%);
+  border-top: solid 0.5vh hsl(18, 30%, 17%);
 
   &:hover {
     font-size: 2.5vh;
@@ -213,150 +225,142 @@ li.dropdown {
   margin: 0 1vw;
   text-align: center;
   width: 12vw;
-  border-top: solid .5vh hsl(20, 92%, 54%);
+  border-top: solid 0.5vh hsl(20, 92%, 54%);
 }
 
-#br {
-  color: hsl(20, 92%, 54%);
-  size: 1vh;
+@keyframes lr_motion {
+  0% {
+    margin-left: 30vw;
+  }
+  50% {
+    margin-left: 0vw;
+  }
+  100% {
+    margin-left: 30vw;
+  }
 }
 
-// @keyframes color_change {
-//   0% {
-//     color: hsl(20, 92%, 54%);
-//   }
-//   25% {
-//     color: hsl(30, 92%, 54%);
-//   }
-//   30% {
-//     color: hsl(180, 92%, 54%);
-//   }
-//   50% {
-//     color: hsl(185, 92%, 54%);
-//   }
-//   55% {
-//     color: hsl(270, 92%, 54%);
-//   }
-//   75% {
-//     color: hsl(275, 92%, 54%);
-//   }
-//   80% {
-//     color: hsl(10, 92%, 54%);
-//   }
-//   100% {
-//     color: hsl(20, 92%, 54%);
-//   }
-// }
+@keyframes lr_motion_less300 {
+  0% {
+    margin-left: 10vw;
+  }
+  50% {
+    margin-left: 0vw;
+  }
+  100% {
+    margin-left: 10vw;
+  }
+}
 
-// @keyframes bordercolor_change {
-//   0% {
-//     border-color: hsl(20, 92%, 54%);
-//   }
-//   25% {
-//     border-color: hsl(30, 92%, 54%);
-//   }
-//   30% {
-//     border-color: hsl(180, 92%, 54%);
-//   }
-//   50% {
-//     border-color: hsl(185, 92%, 54%);
-//   }
-//   55% {
-//     border-color: hsl(270, 92%, 54%);
-//   }
-//   75% {
-//     border-color: hsl(275, 92%, 54%);
-//   }
-//   80% {
-//     border-color: hsl(10, 92%, 54%);
-//   }
-//   100% {
-//     border-color: hsl(20, 92%, 54%);
-//   }
-// }
+@media screen and (max-width: 992px) {
+  li a,
+  .dropbtn {
+    font-size: 1.8vh;
+  }
+  .dropdown-content {
+    max-width: 18vw;
+    overflow: hidden;
+  }
+  .dropdown-content a {
+    font-size: 1.5vh;
+    padding: 1vh;
+  }
+}
 
-// @keyframes bgcolor_change {
-//   0% {
-//     background-color: hsl(18, 30%, 17%);
-//   }
-//   25% {
-//     background-color: hsl(28, 30%, 17%);
-//   }
-//   30% {
-//     background-color: hsl(178, 30%, 17%);
-//   }
-//   50% {
-//     background-color: hsl(183, 30%, 17%);
-//   }
-//   55% {
-//     background-color: hsl(268, 30%, 17%);
-//   }
-//   75% {
-//     background-color: hsl(273, 30%, 17%);
-//   }
-//   80% {
-//     background-color: hsl(8, 30%, 17%);
-//   }
-//   100% {
-//     background-color: hsl(18, 30%, 17%);
-//   }
-// }
+@media screen and (max-width: 600px) {
+  li a,
+  .dropbtn {
+    font-size: 1vh;
+  }
+  .dropdown-content {
+    max-width: 20vw;
+    overflow: hidden;
+  }
+  .dropdown-content a {
+    font-size: 0.8vh;
+    padding: 1vh;
+  }
+  #seb,
+  #son {
+    font-size: 6vh;
+  }
+  #tk {
+    font-size: 3.6vh;
+  }
+}
 
-// @keyframes bgimage_change {
-//   0% {
-//     background-image: linear-gradient(
-//       320deg,
-//       hsl(18, 30%, 17%) 0%,
-//       hsl(20, 60%, 30%) 90%
-//     );
-//   }
-//   25% {
-//     background-image: linear-gradient(
-//       320deg,
-//       hsl(28, 30%, 17%) 0%,
-//       hsl(30, 60%, 30%) 90%
-//     );
-//   }
-//   30% {
-//     background-image: linear-gradient(
-//       320deg,
-//       hsl(178, 30%, 17%) 0%,
-//       hsl(180, 60%, 30%) 90%
-//     );
-//   }
-//   50% {
-//     background-image: linear-gradient(
-//       320deg,
-//       hsl(183, 30%, 17%) 0%,
-//       hsl(185, 60%, 30%) 90%
-//     );
-//   }
-//   55% {
-//     background-image: linear-gradient(
-//       320deg,
-//       hsl(268, 30%, 17%) 0%,
-//       hsl(270, 60%, 30%) 90%
-//     );
-//   }
-//   75% {
-//     background-image: linear-gradient(
-//       320deg,
-//       hsl(273, 30%, 17%) 0%,
-//       hsl(275, 60%, 30%) 90%
-//     );
-//   }
-//   80% {
-//     background-image: linear-gradient(
-//       320deg,
-//       hsl(8, 30%, 17%) 0%,
-//       hsl(10, 60%, 30%) 90%
-//     );
-//   }
-//   100% {
-//     background-image: linear-gradient(
-//       320deg,
-//       hsl(18, 30%, 17%) 0%,
-//       hsl(20, 60%, 30%) 90%
-//     );
-//   }
-// }
+@media screen and (max-width: 400px) {
+  #seb,
+  #son {
+    font-size: 5.5vh;
+  }
+  #tk {
+    font-size: 3.2vh;
+  }
+  li a,
+  .dropbtn {
+    font-size: 0.8vh;
+  }
+  .dropdown-content {
+    max-width: 20vw;
+    overflow: hidden;
+  }
+  .dropdown-content a {
+    font-size: 0.8vh;
+    padding: 1vh;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  #seb,
+  #son {
+    font-size: 3vh;
+  }
+  #tk {
+    font-size: 2.4vh;
+  }
+  #sebsontk {
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    padding: 0px;
+    animation-name: lr_motion_less300;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
+  header {
+    font-size: 2vh;
+  }
+  * {
+    font-size: 1vh;
+  }
+  #tresc a {
+    font-size: 1vh;
+  }
+  #tresc a:hover {
+    font-size: 1.1vh;
+  }
+  .button {
+    font-size: 1vh;
+  }
+  .button:hover {
+    font-size: 1.1vh;
+  }
+  .input {
+    font-size: 1vh;
+  }
+  #tiny_text {
+    font-size: 0.8vh;
+  }
+  li a,
+  .dropbtn {
+    font-size: 0.8vh;
+  }
+  .dropdown-content {
+    max-width: 30vw;
+    overflow: hidden;
+  }
+  .dropdown-content a {
+    font-size: 0.9vh;
+    padding: 1vh;
+  }
+}
