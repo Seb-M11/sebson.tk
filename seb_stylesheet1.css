@@ -1,13 +1,14 @@
 /* są jeszcze w komentarzach niewykorzystane animacje, możecie obczaić :D */
-body {
-	background-image: linear-gradient( 320deg, hsla(18,30%,17%,1) 0%, hsla(20,60%,30%,1) 90%);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	transition-duration: 1s;
-	/*animation-name: bgimage_change;
-	animation-duration: 220s;
-	animation-iteration-count: infinite;*/
-}
+
+  body > * {color: white;}
+  
+  a {color: hsla(18,30%,17%,1);}
+  
+  #tresc a {font-size: 2.5vh;}
+  
+  ul a {background-color: hsla(18,30%,17%,0.8); color: rgba(255,255,255,0.7); font-size: 3vh;  padding: 2.8vh;}
+  
+  #menu {background-color: hsla(18,30%,17%,1);}
 
 body > * {
 	transition-duration: 1s;
@@ -45,6 +46,9 @@ body > * {
 	margin-bottom: 3vh;
 	transition-duration: 1s;
 	text-decoration: none;
+	animation-name: lr_motion;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
 }
 
 #tresc {
@@ -92,6 +96,16 @@ header {
 	text-align: right;
 }
 
+#sticky{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+h1 {
+	
+}
+
 a {
 	transition-duration: 0s;
 }
@@ -123,6 +137,7 @@ li a, .dropbtn {
   padding: 2vh;
   text-decoration: none;
   transition-duration: 1s;
+  cursor: pointer;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
@@ -144,18 +159,6 @@ li.dropdown {
   z-index: 1;
   transition-duration: 1s;
   box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.1);
-}
-
-@media(max-width: 600px) {
-	.dropdown-content {
-	max-width: 60vw;
-	}
-}
-
-@media(max-width: 1000px) {
-	.dropdown-content {
-	max-width: 50vw;
-	}
 }
 
 .dropdown-content a {
@@ -212,11 +215,6 @@ li.dropdown {
 	border-top: solid 0.5vh hsla(20,92%,54%,1);
 }
 
-#br {
-	color: hsla(20,92%,54%,1);
-	size: 1vh;
-}
-
 	@keyframes color_change {
 0% {color: hsla(20,92%,54%,1);}
 25% {color: hsla(30,92%,54%,1);}
@@ -258,4 +256,86 @@ li.dropdown {
 75% {background-image: linear-gradient( 320deg, hsla(273,30%,17%,1) 0%, hsla(275,60%,30%,1) 90%);}
 80% {background-image: linear-gradient( 320deg, hsla(8,30%,17%,1) 0%, hsla(10,60%,30%,1) 90%);}
 100% {background-image: linear-gradient( 320deg, hsla(18,30%,17%,1) 0%, hsla(20,60%,30%,1) 90%);}
+}
+	@keyframes lr_motion {
+0% {margin-left: 30vw;}
+50% {margin-left: 0vw;}
+100% {margin-left: 30vw;}
+}
+
+	@keyframes lr_motion_less300 {
+0% {margin-left: 10vw;}
+50% {margin-left: 0vw;}
+100% {margin-left: 10vw;}
+}
+
+@media screen and (max-width: 992px) {
+	/* test only xD: body {background-image: linear-gradient(blue, red);} */
+	li a, .dropbtn {font-size: 1.8vh;}
+	.dropdown-content {max-width: 18vw; overflow: hidden;}
+	.dropdown-content a {font-size: 1.5vh; padding: 1vh;}
+}
+
+@media screen and (max-width: 600px) {
+	/* test only xD: body {background-image: linear-gradient(green, black);}*/
+	li a, .dropbtn {font-size: 1vh;}
+	.dropdown-content {max-width: 20vw; overflow: hidden;}
+	.dropdown-content a {font-size: 0.8vh; padding: 1vh;}
+	#seb, #son {font-size: 6vh;}
+	#tk {font-size: 3.6vh;}
+}
+
+@media screen and (max-width: 400px) {
+	/* test only xD: body {background-image: linear-gradient(pink, white);}*/
+	#seb, #son {font-size: 5.5vh;}
+	#tk {font-size: 3.2vh;}
+	li a, .dropbtn {font-size: 0.8vh;}
+	.dropdown-content {max-width: 20vw; overflow: hidden;}
+	.dropdown-content a {font-size: 0.8vh; padding: 1vh;}
+}
+
+@media screen and (max-width: 345px) {
+	/* test only xD: body {background-image: linear-gradient(pink, white);}*/
+	#seb, #son {font-size: 3vh;}
+	#tk {font-size: 2.4vh;}
+	#sebsontk {border-bottom-width: 3px; border-left-width: 3px; padding: 0px; animation-name: lr_motion_less300;
+	animation-duration: 20s; animation-iteration-count: infinite;}
+	header {font-size: 2vh;}
+	* {font-size: 1vh;}
+	#tresc a {font-size: 1vh;}
+	#tresc a:hover {font-size: 1.1vh;}
+	.button {font-size: 1vh;}
+	.button:hover {font-size: 1.1vh;}
+	.input {font-size: 1vh;}
+	#tiny_text {font-size: 0.8vh;}
+	li a, .dropbtn {font-size: 0.8vh;}
+	.dropdown-content {max-width: 30vw; overflow: hidden;}
+	.dropdown-content a {font-size: 0.9vh; padding: 1vh;}
+}
+
+/* @media screen and (max-height: 700px) {
+	body {background-image: linear-gradient(pink, white);} 
+	li a, .dropbtn {font-size: 1vh;}
+	.dropdown-content {max-width: 20vw;}
+	.dropdown-content a {font-size: 0.3vh;}
+} */
+
+body {
+	background-image: linear-gradient( 320deg, hsla(18,30%,17%,1) 0%, hsla(20,60%,30%,1) 90%);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	box-sizing:content-box;
+	height: 98%;
+	width: 98%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	padding: none;
+	margin: none;
+	border: none;
+	outline: none;
+	/*animation-name: bgimage_change;
+	animation-duration: 220s;
+	animation-iteration-count: infinite;*/
 }
