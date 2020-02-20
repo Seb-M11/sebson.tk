@@ -1,57 +1,58 @@
 <!DOCTYPE html>
-<html lang="pl">
-
+<html>
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sebson.tk</title>
-  <link rel="stylesheet" href="css/index.css">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="sebson_stylowanie.css"> 
 </head>
 
-<body>
-  <a href="">
-    <div id="sebsontk">
-      <span id="seb">seb</span>
-      <span id="son">son</span>
-      <sub><span id="tk">.tk</span></sub>
-    </div>
-  </a>
-  <div id="sticky">
-    <ul id="menu">
-      <li><a href="">Home</a></li>
-      <li><a href="">News</a></li>
-      <li><a href="">About Us</a></li>
-      <li class="dropdown">
-        <a class="dropbtn">Projekty</a>
-        <div class="dropdown-content">
-          <a href="projekty/kalkulator">kalkulator</a>
-          <a href="projekty/kalkulator-dat">kalkulator-dat</a>
-          <a href="projekty/szachy">szachownica</a>
-          <a href="projekty/tabelka-kolory">kolorowa tabelka</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="" class="dropbtn">Info</a>
-        <div class="dropdown-content">
-          <a href="">Sebson (Madzia Senior)</a>
-          <a href="">Volper Gayming</a>
-          <a href="">AirJumper (powietrzny skoczek)</a>
-        </div>
-      </li>
+
+
+<div class="nagłówek">Sebson.tk</div>
+
+
+<div class="tło">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+      <li>START</li>
+	  <li>NEWS</li>
+      <li>ABOUT ME</li>
+      <li>PROJECTS</li>
+      <li>CONTACT</li>
+	  <li>INFO</li>
     </ul>
   </div>
 
-  <br>
-  <div id="tresc">
-    <header>Witaj na sebson.tk</header>
-    <p>Na stronie jeszcze wiele nie ma, lecz zachęcam do <a href="https://youtu.be/EBhLJ2iLjxo">kontrybucji</a>.</p>
-    <p>Custom input <input class="input" type="text" placeholder="Write here!"></p>
-    <p>Custom button <button class="button">Click me!</button></p>
-    <p id="tiny_text">STYLING: <a href="https://youtube.com/channel/UCvX_mZjnBVdbg3RQsKz96sQ">AirJumper</a></p>
-    <p>Polecam również <a href="https://kamiltrojan.tk">kamiltrojan.tk</a> oraz <a href="https://cezario.tk">cezario.tk</a></p>
+  <div class="col-6 col-s-9 tak">
+    <h1>Witaj na Sebson.tk</h1>
+    <p>Na stronie na razie nie ma dużo, ale myślę że z upływem czasu będzie się rozwijać</p>
   </div>
-</body>
 
+  <div class="col-3 col-s-12 taak">
+    <div class="formularz">
+<div>
+  <form>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="Warszawa">Warszawa</option>
+      <option value="Kraków">Kraków</option>
+      <option value="Katowice">Katowice</option>
+    </select>
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
 </html>
