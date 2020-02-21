@@ -10,6 +10,19 @@
   display: table;
 }
 
+a {
+	text-decoration:none;
+	color: #ffffff;
+	margin: 0;
+    padding: 0;
+	background-color: #2eb82e;
+}
+
+a:hover {
+	background-color: #2eb82e;
+	color: #ffffff
+}
+
 [class*="col-"] {
   float: left;
   padding: 15px;
@@ -20,7 +33,7 @@ html {
 }
 
 .nagłówek {
-  background-color: #008000;
+  background-color: green;
   color: #ffffff;
   padding: 30px;
   font-size:25px;
@@ -138,3 +151,4 @@ div {
   background-color: #70db70;
   padding: 20px;
 }
+
