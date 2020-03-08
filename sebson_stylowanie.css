@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
-  background-color: #70db70;
+  background-color: #ff3333;
 }
 
 .tło::after {
-  background-color:  #99e699;
+  background-color:  #ff1a1a;
   content: "";
   clear: both;
   display: table;
@@ -15,11 +15,11 @@ a {
 	color: #ffffff;
 	margin: 0;
     padding: 0;
-	background-color: #2eb82e;
+	background-color: #ff0000 ;
 }
 
 a:hover {
-	background-color: #2eb82e;
+	background-color:  #ff0000;
 	color: #ffffff
 }
 
@@ -33,9 +33,10 @@ html {
 }
 
 .nagłówek {
-  background-color: green;
+  background-image: linear-gradient(#ff0000, #ff3333);
   color: #ffffff;
   padding: 30px;
+  height: 120px;
   font-size:25px;
 }
 
@@ -48,33 +49,24 @@ html {
 .menu li {
   padding: 8px;
   margin-bottom: 7px;
-  background-color: #2eb82e;
+  background-color: #ff0000;
   color: #ffffff;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .menu li:hover {
-  background-color: #008000;
-}
-
-.formularz {
-  background-color: #00CC00;
-  padding: 15px;
-  color: #ffffff;
-  text-align: center;
-  font-size: 14px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background-color: #ff0000;
 }
 
 .footer {
-  background-color: #0099cc;
+  background-color: #ff1a1a;
   color: #ffffff;
   text-align: center;
   font-size: 12px;
   padding: 15px;
 }
 
-<!--/* For mobile phones: */
+/* For mobile phones: */
 [class*="col-"] {
   width: 100%;
 }
@@ -114,8 +106,19 @@ html {
 color: #ffffff;
 }
 
+.formularz {
+  background-color: #ff0000;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+
+
 .taak {
-background-color: #008000;
+background-color: #e60000
 }
 
 
@@ -126,14 +129,14 @@ input[type=text], select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #008000;
+  border: 1px solid #ff1a1a;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
 input[type=submit] {
   width: 100%;
-  background-color: #008000;
+  background-color: #ff0000;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -143,11 +146,11 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color:#008000;
+  background-color:#ff1a1a;
 }
 
 div {
   border-radius: 5px;
-  background-color: #70db70;
+  background-color: #ff3333;
   padding: 20px;
 }
