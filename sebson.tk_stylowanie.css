@@ -40,13 +40,9 @@ h1 {
   font-size:25px;
 }
 @media only screen and (max-width:620px) {
-  .menu, .main, {
-   width: 16.66%;
-  }
-  .right {
-	width: 100%;
-
-  }
+  .menu, .main, .right  {
+   width: 100%;
+	}
 }
 body {
   font-family:Verdana;
