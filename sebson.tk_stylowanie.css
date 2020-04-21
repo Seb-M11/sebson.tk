@@ -41,7 +41,7 @@ h1 {
 }
 @media only screen and (max-width:620px) {
   .menu, .main, .right  {
-   width: 100px;
+   width: 100%;
 	}
 }
 body {
